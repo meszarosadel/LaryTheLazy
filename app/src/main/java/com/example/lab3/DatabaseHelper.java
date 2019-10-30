@@ -26,7 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // create notes table
+        // create hobby table
         db.execSQL(Hobby.CREATE_TABLE);
     }
 
@@ -100,7 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // close db connection
         db.close();
 
-        // return notes list
+        // return hobbies list
         return hobbies;
     }
 

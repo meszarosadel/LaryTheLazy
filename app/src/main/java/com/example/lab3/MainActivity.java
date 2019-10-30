@@ -26,13 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //adatbazis
         myDb = new DatabaseHelper(this);
 
-        //felugro naptar es kivalasztott datum kiiratasa
         dateTextView = (TextView) findViewById(R.id.dateViewText);
         dateBtn = (Button) findViewById(R.id.dateBtn);
-
         dateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,16 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         logInBtn= (Button) findViewById(R.id.loginBtn);
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToHobby();
+                loggingIn();
             }
         });
     }
 
-    public void goToHobby(){
+    public void loggingIn(){
         Intent intent = new Intent(this, hobbyActivity.class);
         startActivity(intent);
     }

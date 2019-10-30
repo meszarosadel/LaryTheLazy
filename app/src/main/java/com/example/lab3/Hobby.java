@@ -22,7 +22,6 @@ public class Hobby {
     public Hobby(int id, String hobby) {
         this.id = id;
         this.hobby = hobby;
-       // this.timestamp = timestamp;
     }
 
     public int getId() {
