@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/hobby_" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/addNewHobbyBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -56,7 +56,7 @@
             app:layout_constraintTop_toBottomOf="@+id/newHobbyEditText" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/viewHobbiesBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
