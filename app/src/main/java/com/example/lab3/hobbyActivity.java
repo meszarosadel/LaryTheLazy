@@ -25,6 +25,8 @@ public class hobbyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hobby);
 
+        user=new User();
+        db=new DatabaseHelper(this);
         newHobbyEditText = findViewById(R.id.newHobbyEditText);
         addNewHobbyBtn = (Button) findViewById(R.id.addNewHobbyBtn);
         viewHobbiesBtn = (Button) findViewById(R.id.viewHobbiesBtn);
@@ -41,18 +43,7 @@ public class hobbyActivity extends AppCompatActivity {
                 viewListOfHobbies();
             }
         });
-/*        //listView = findViewById(R.id.listView);
-        db = new DatabaseHelper(this);
-        writeHobbies((ArrayList<Hobby>)db.getAllHobbies());
-    }
-
-        public void writeHobbies( ArrayList<Hobby> hobbies){
-            for(int i=0; i<hobbies.size(); i++){
-                hobies.add(hobbies.get(i).getHobby());
-            }
-           // myAdapter = new ArrayAdapter(this, android.R.simple_list_item_activated_1, hobies);
-            listView.setAdapter(myAdapter);
-  */      }
+}
 
         public void viewListOfHobbies(){
             Intent intent = new Intent(this, ViewHobbies.class );
