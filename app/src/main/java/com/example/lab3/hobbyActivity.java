@@ -19,7 +19,7 @@ public class hobbyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hobby);
-        //listView = findViewById(R.id.listView);
+/*        //listView = findViewById(R.id.listView);
         db = new DatabaseHelper(this);
         writeHobbies((ArrayList<Hobby>)db.getAllHobbies());
     }
@@ -30,5 +30,5 @@ public class hobbyActivity extends AppCompatActivity {
             }
            // myAdapter = new ArrayAdapter(this, android.R.simple_list_item_activated_1, hobies);
             listView.setAdapter(myAdapter);
-        }
+  */      }
     }

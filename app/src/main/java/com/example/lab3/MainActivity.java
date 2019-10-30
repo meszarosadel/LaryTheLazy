@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.content.Intent;
 
 import java.util.Calendar;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button dateBtn;
     Calendar calendar;
     DatePickerDialog dpd;
+    Button logInBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +53,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        logInBtn= (Button) findViewById(R.id.loginBtn);
+        logInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToHobby();
+            }
+        });
+    }
+
+    public void goToHobby(){
+        Intent intent = new Intent(this, hobbyActivity.class);
+        startActivity(intent);
     }
 }
