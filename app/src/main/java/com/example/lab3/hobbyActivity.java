@@ -31,6 +31,8 @@ public class hobbyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 user.addHobby(newHobbyEditText.getText().toString());
                 db.insertHobby(newHobbyEditText.getText().toString());
+                newHobbyEditText.setText("");
+
             }
         });
         viewHobbiesBtn.setOnClickListener(new View.OnClickListener() {
